@@ -23,7 +23,7 @@ const Statistique = () => {
   }, []);
 }
 
-function ListeClub( type: string ) {
+function ListeClub( {type: string} ) {
     const [equipes, setEquipes] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
