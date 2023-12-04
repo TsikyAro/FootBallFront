@@ -23,7 +23,7 @@ const Statistique = () => {
   }, []);
 }
 
-function ListeClub({type}) {
+function ListeClub( type: number ) {
     const [equipes, setEquipes] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -45,7 +45,7 @@ function ListeClub({type}) {
       }, [type]);
   return (
     <IonAccordionGroup expand="inset">
-    {equipes.map((row) => (
+    {equipes.map((row : any) => (
       <IonAccordion value={row.idEquipe}>
         <IonItem slot="header" color="light">
           <IonLabel>{row.nomequipe} <label margin-left="100px">note:{row.note}</label> </IonLabel>
