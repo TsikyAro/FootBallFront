@@ -23,13 +23,13 @@ const Statistique = () => {
   }, []);
 }
 
-function ListeClub( type: number ) {
+function ListeClub( type: string ) {
     const [equipes, setEquipes] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
           try {
             var response;
-            if(type==2){
+            if(type=="2"){
               response = await fetch(`https://foot-production.up.railway.app/generale`);
             }else{
 

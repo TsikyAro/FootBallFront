@@ -7,7 +7,7 @@ const MaPage = () => {
   const [selectedSegment, setSelectedSegment] = useState('2');
   const [externeClicked, setExterneClicked] = useState(false);
 
-  const handleSegmentChange = (event) => {
+  const handleSegmentChange = (event: any) => {
     const value = event.detail.value;
     setSelectedSegment(value);
 
